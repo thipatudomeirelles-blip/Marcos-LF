@@ -10,5 +10,5 @@ export const CONTACT = {
   phoneLabelFull: '+55 (11) 99018-5009',
   location: 'São Paulo - SP',
   email: 'marcoslefosse@gmail.com',
-  address: 'Avenida Júlio Buono 599, ap 33, Vila Gustavo, São Paulo, SP',
+  address: 'Avenida Júlio Buono 599, Vila Gustavo, São Paulo, SP',
 }
