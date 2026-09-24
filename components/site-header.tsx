@@ -1,3 +1,5 @@
+'use client'
+
 import { WHATSAPP_URL } from '@/lib/site'
 
 const NAV_LINKS = [
@@ -38,6 +40,13 @@ export function SiteHeader() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+              (window as any).gtag('event', 'conversion', {
+                send_to: 'AW-18455432724/WCD9CNPzi4MdEJScnuBE',
+              })
+            }
+          }}
           className="shrink-0 whitespace-nowrap rounded-full bg-neutral-600 px-3 py-1.5 text-center text-xs font-semibold text-white shadow-md transition-all hover:bg-neutral-700 md:px-7 md:py-3.5 md:text-base"
         >
           Consulte um especialista
