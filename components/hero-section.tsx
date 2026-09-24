@@ -1,3 +1,5 @@
+'use client'
+
 import { Clock, Phone, MapPin, Mail } from 'lucide-react'
 import { WHATSAPP_URL, CONTACT } from '@/lib/site'
 
@@ -61,6 +63,13 @@ export function HeroSection() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'conversion', {
+                  send_to: 'AW-18455432724/WCD9CNPzi4MdEJScnuBE',
+                })
+              }
+            }}
             className="mt-7 hidden w-full rounded-full bg-white px-8 py-3 text-center text-base font-semibold text-black transition-colors hover:bg-neutral-200 sm:w-auto lg:inline-block"
           >
             Consulte um especialista
