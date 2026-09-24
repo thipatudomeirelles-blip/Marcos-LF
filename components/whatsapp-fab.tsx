@@ -1,3 +1,5 @@
+'use client'
+
 import { WHATSAPP_URL } from '@/lib/site'
 
 export function WhatsappFab() {
@@ -7,6 +9,13 @@ export function WhatsappFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
+      onClick={() => {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'conversion', {
+            send_to: 'AW-18455432724/WCD9CNPzi4MdEJScnuBE',
+          })
+        }
+      }}
       className="fixed bottom-4 right-4 z-50 transition-transform hover:scale-105 md:bottom-6 md:right-6"
     >
       <img
